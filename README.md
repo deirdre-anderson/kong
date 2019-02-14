@@ -38,3 +38,11 @@ To test this plugin in isolation run the following command from /kong directory 
 ```
 vagrant@ubuntu-bionic:/kong$ bin/busted /kong-plugin/spec/route-on-header
 ```
+
+## Furthur considerations ...
+
+- Harden plugin scheme to more closely match required paramater
+- Determine more elegant data scheme to capture header array of name and value pairs 
+  - Currently although the headers paramaters is an 'array' the items are all stored in one item of the array as a string
+- Add unit tests to cover more of the usecases 
+    - Currently the unit test just checks for two basic usecases if the headers match or they do not match
